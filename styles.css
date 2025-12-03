@@ -19,6 +19,9 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
 }
 
 body {
@@ -26,10 +29,14 @@ body {
     background-color: var(--primary-black);
     color: var(--text-white);
     overflow-x: hidden;
+    overflow-y: auto;
     line-height: 1.6;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+    position: relative;
+    overscroll-behavior-y: none;
 }
 
 .hidden {
@@ -330,13 +337,13 @@ body {
 }
 
 .hero-left {
-    animation: fadeInUp 0.8s ease;
+    animation: fadeInUp 0.4s ease;
 }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -477,7 +484,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeInRight 1s ease 0.2s both;
+    animation: fadeInRight 0.4s ease 0.1s both;
 }
 
 @media (max-width: 768px) {
@@ -489,7 +496,7 @@ body {
 @keyframes fadeInRight {
     from {
         opacity: 0;
-        transform: translateX(40px);
+        transform: translateX(20px);
     }
     to {
         opacity: 1;
@@ -551,6 +558,12 @@ body {
     font-size: 0.85rem;
     font-weight: 500;
     animation: bounce 2s infinite;
+}
+
+@media (max-width: 768px) {
+    .scroll-hint {
+        display: none;
+    }
 }
 
 @keyframes bounce {
@@ -1145,6 +1158,18 @@ section {
 }
 
 @media (max-width: 768px) {
+    html, body {
+        overscroll-behavior-y: none;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    body {
+        overflow-y: auto;
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;

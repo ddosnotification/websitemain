@@ -78,10 +78,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for fade-in animations
+// Intersection Observer for fade-in animations - faster and smoother
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.05,
+    rootMargin: '0px 0px -20px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -93,11 +93,11 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all cards and sections
-document.querySelectorAll('.about-card, .location-card').forEach(card => {
+// Observe all cards and sections with faster transitions
+document.querySelectorAll('.about-item, .location-card, .social-btn').forEach(card => {
     card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
     observer.observe(card);
 });
 
@@ -108,14 +108,7 @@ document.querySelectorAll('img[src*="logo"]').forEach(img => {
     });
 });
 
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    }, 100);
-});
+// Remove slow loading animation for faster page load
 
 // Keyboard navigation for accessibility
 document.addEventListener('keydown', (e) => {

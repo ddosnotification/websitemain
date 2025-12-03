@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Podperos - Exkluzívne vybrané snus značky 24/7 cez automat. Top picks, najnovšie chute, influencer značky, populárne značky nedostupné na Slovensku. Najlepšie nikotínové vrecká v automate.">
+    <meta name="keywords" content="podperos, snus automat slovensko, nikotínové vrecká automat, top snus značky slovensko, exkluzívny snus, influencer snus značky, nové snus chute 2025, najlepšie nikotínové vrecká, snus 24/7, automat na snus, populárne snus značky, party snus, studentský snus, mladý snus brand, curated snus selection, premium snus slovensko">
+    <meta name="author" content="Podperos">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Podperos - Najlepšie vybrané snus značky 24/7">
+    <meta property="og:description" content="Náš tím vyberá najlepšie snus značky, nové chute a exkluzívne produkty. Dostupné cez automat 24/7.">
+    <meta property="og:image" content="media/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Podperos - Najlepšie vybrané snus značky 24/7">
+    <meta property="twitter:description" content="Náš tím vyberá najlepšie snus značky, nové chute a exkluzívne produkty. Dostupné cez automat 24/7.">
+    <meta property="twitter:image" content="media/logo.png">
+    
+    <title>Podperos - Exkluzívne Snus Značky 24/7 | Automat na Nikotínové Vrecká | Top Picks</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="media/logo.png">
+    <link rel="apple-touch-icon" href="media/logo.png">
+    
+    <!-- Google Fonts - Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Age Verification Modal -->
+    <div id="ageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-logo">
+                <img src="media/logo.png" alt="Podperos Logo">
+            </div>
+            <h2>Ste starší ako 18 rokov?</h2>
+            <p>Táto stránka obsahuje produkty s nikotínom. Musíte byť starší ako 18 rokov na pokračovanie.</p>
+            <div class="modal-buttons">
+                <button id="confirmAge" class="btn-primary">Áno, som starší ako 18</button>
+                <button id="denyAge" class="btn-secondary">Nie, som mladší ako 18</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="hidden">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="media/text-logo.png" alt="Podperos Logo">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Domov</a></li>
+                    <li><a href="#about">O nás</a></li>
+                    <li><a href="#locations">Lokácie</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-pattern"></div>
+            </div>
+            <div class="hero-container">
+                <div class="hero-left">
+                    <div class="hero-badge">24/7 Dostupné</div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Najlepšie</span>
+                        <span class="title-line highlight">vybrané</span>
+                        <span class="title-line">snus značky</span>
+                    </h1>
+                    <p class="hero-description">Náš tím testuje a vyberá len top picks, nové chute od veľkých značiek, influencer značky a exkluzívne produkty nedostupné v Slovensku.</p>
+                    <div class="hero-cta">
+                        <a href="#locations" class="btn-primary">Nájsť automat</a>
+                        <a href="#about" class="btn-secondary">Zistiť viac</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image-wrapper">
+                        <img src="media/logo.png" alt="Podperos Logo" class="hero-image">
+                        <div class="hero-image-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-hint">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-header">
+                    <div class="about-header-left">
+                        <span class="section-label">Prečo Podperos?</span>
+                        <h2 class="section-title">Kurátorstvo<br/>na ďalšej úrovni</h2>
+                    </div>
+                    <div class="about-header-right">
+                        <p class="about-intro">Náš tím neustále testuje a vyberá len najlepšie produkty. Každý automat obsahuje exkluzívnu selekciu, ktorú nájdete len u nás.</p>
+                    </div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-item">
+                        <div class="about-item-number">01</div>
+                        <div class="about-item-content">
+                            <h3>Top Picks</h3>
+                            <p>Náš tím testuje a vyberá len najlepšie snus značky. Žiadne kompromisy, len kvalita.</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-item-number">02</div>
+                        <div class="about-item-content">
+                            <h3>Nové Chute</h3>
+                            <p>Prvý na Slovensku s najnovšími chuťami od veľkých značiek. Buďte medzi prvými.</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-item-number">03</div>
+                        <div class="about-item-content">
+                            <h3>Exkluzívne Značky</h3>
+                            <p>Značky, ktoré nie sú dostupné v bežných obchodoch na Slovensku. Len u nás.</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-item-number">04</div>
+                        <div class="about-item-content">
+                            <h3>Influencer Značky</h3>
+                            <p>Najnovšie produkty od influencerov a populárnych značiek. Trendy v reálnom čase.</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-item-number">05</div>
+                        <div class="about-item-content">
+                            <h3>24/7 Dostupnosť</h3>
+                            <p>Kedykoľvek, kdekoľvek. Naše automaty sú vždy otvorené. Bez obmedzení.</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-item-number">06</div>
+                        <div class="about-item-content">
+                            <h3>Dobrá Cena</h3>
+                            <p>Kvalitné produkty za férovú cenu. Bez zbytočných prirážok. Fér pre všetkých.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Locations Section -->
+        <section id="locations" class="locations">
+            <div class="container">
+                <div class="locations-header">
+                    <div class="locations-header-left">
+                        <span class="section-label">Lokácie</span>
+                        <h2 class="section-title">Kde nás<br/>nájdete?</h2>
+                    </div>
+                    <div class="locations-header-right">
+                        <p class="locations-intro">Naše automaty sú strategicky umiestnené na miestach, kde sa stretávajú mladí ľudia. Vždy blízko vás.</p>
+                    </div>
+                </div>
+                <div class="locations-list">
+                    <div class="location-item">
+                        <div class="location-item-left">
+                            <div class="location-number">01</div>
+                            <div class="location-info">
+                                <h3>Univerzitné Mestá</h3>
+                                <p>Bratislava, Košice, Trnava, Žilina</p>
+                            </div>
+                        </div>
+                        <div class="location-item-right">
+                            <span class="location-tag">4 lokácie</span>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-item-left">
+                            <div class="location-number">02</div>
+                            <div class="location-info">
+                                <h3>Nočné Kluby</h3>
+                                <p>V blízkosti populárnych party zón</p>
+                            </div>
+                        </div>
+                        <div class="location-item-right">
+                            <span class="location-tag">V centre</span>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-item-left">
+                            <div class="location-number">03</div>
+                            <div class="location-info">
+                                <h3>Športové Centrá</h3>
+                                <p>Fitnes centrá a športové areály</p>
+                            </div>
+                        </div>
+                        <div class="location-item-right">
+                            <span class="location-tag">Aktívne</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-header">
+                    <div class="contact-header-left">
+                        <span class="section-label">Kontakt</span>
+                        <h2 class="section-title">Sledujte<br/>nás</h2>
+                    </div>
+                    <div class="contact-header-right">
+                        <p class="contact-intro">Buďte v kontakte a získajte najnovšie info o nových produktoch, lokáciách a exkluzívnych ponukách.</p>
+                    </div>
+                </div>
+                <div class="social-grid">
+                    <a href="#" class="social-card" aria-label="Instagram">
+                        <div class="social-card-header">
+                            <span class="social-icon">📷</span>
+                            <span class="social-label">Instagram</span>
+                        </div>
+                        <span class="social-handle">@podperos</span>
+                    </a>
+                    <a href="#" class="social-card" aria-label="TikTok">
+                        <div class="social-card-header">
+                            <span class="social-icon">🎵</span>
+                            <span class="social-label">TikTok</span>
+                        </div>
+                        <span class="social-handle">@podperos</span>
+                    </a>
+                    <a href="#" class="social-card" aria-label="Facebook">
+                        <div class="social-card-header">
+                            <span class="social-icon">👥</span>
+                            <span class="social-label">Facebook</span>
+                        </div>
+                        <span class="social-handle">Podperos</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-top">
+                        <div class="footer-logo">
+                            <img src="media/text-logo.png" alt="Podperos Logo">
+                        </div>
+                        <div class="footer-nav">
+                            <a href="#home">Domov</a>
+                            <a href="#about">O nás</a>
+                            <a href="#locations">Lokácie</a>
+                            <a href="#contact">Kontakt</a>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p class="footer-text">Podperos © 2025. Všetky práva vyhradené.</p>
+                        <p class="footer-disclaimer">Produkty obsahujú nikotín, ktorý spôsobuje závislosť. Len pre osoby staršie ako 18 rokov.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

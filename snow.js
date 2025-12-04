@@ -1,7 +1,7 @@
 // Winter Snow Effect
 (function() {
     const snowflakes = [];
-    const maxFlakes = 50;
+    const maxFlakes = 5; // FEWER SNOWFLAKES
     const snowContainer = document.createElement('div');
     snowContainer.id = 'snow-container';
     snowContainer.style.cssText = `
@@ -18,11 +18,11 @@
 
     function createSnowflake() {
         const snowflake = document.createElement('div');
-        const size = Math.random() * 8 + 6; // 6-14px
+        const size = Math.random() * 4 + 2; // SMALLER SNOWFLAKES (2–6px)
         const startX = Math.random() * window.innerWidth;
-        const fallSpeed = Math.random() * 3 + 2; // 2-5 seconds
-        const swayAmount = Math.random() * 50 + 25; // 25-75px
-        const opacity = Math.random() * 0.5 + 0.5; // 0.5-1
+        const fallSpeed = Math.random() * 3 + 2;
+        const swayAmount = Math.random() * 40 + 15; // slightly smaller sway
+        const opacity = Math.random() * 0.4 + 0.4; 
         
         snowflake.style.cssText = `
             position: absolute;
@@ -34,7 +34,7 @@
             left: ${startX}px;
             top: -10px;
             pointer-events: none;
-            box-shadow: 0 0 ${size * 2}px rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 ${size * 1.5}px rgba(255, 255, 255, 0.8);
         `;
         
         snowContainer.appendChild(snowflake);
@@ -56,7 +56,7 @@
         
         animation.onfinish = () => {
             snowflake.remove();
-            createSnowflake(); // Create new snowflake
+            createSnowflake();
         };
         
         snowflakes.push(snowflake);
@@ -66,7 +66,7 @@
     for (let i = 0; i < maxFlakes; i++) {
         setTimeout(() => {
             createSnowflake();
-        }, i * 200); // Stagger creation
+        }, i * 250);
     }
 
     // Handle window resize
@@ -74,15 +74,13 @@
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
-            // Remove all snowflakes and recreate
             snowflakes.forEach(flake => flake.remove());
             snowflakes.length = 0;
             for (let i = 0; i < maxFlakes; i++) {
                 setTimeout(() => {
                     createSnowflake();
-                }, i * 200);
+                }, i * 250);
             }
         }, 250);
     });
 })();
-
